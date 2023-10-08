@@ -1,0 +1,237 @@
+	Note:
+
+-p : for the content
+-t : for the type 
+-s : for checking the staging area
+
+Various hashing functions:
+
+MDS
+SHA1
+SHA256
+SHA 384
+SHA 512
+
+4 objects of the git:-
+1) Blob- binary large object
+2) Tree
+3) commit
+4) tags
+
+Working Directory
+
+Staging Area
+
+Git Repo
+
+
+
+
+--------------
+| 11.09.2023 |
+--------------
+
+LF -> working dir (line fail)
+CRLF -> career LF ||find Staging area
+
+git ls-files -s || what types of files are available for staging area
+
+100644 -> blob id
+
+git cat-file -t 0ac9 || to check the type of the object
+
+git cat-file -p 0ac9 || to check the contents
+
+git cat-file -p 0ac9 || to check for the size
+
+$ git cat-file -t 6135 || commit
+
+$ git cat-file -t 36a9 || tree
+
+git log || to check how many commits are there
+
+--------------
+| 12.09.2023 |
+--------------
+
+       Tree
+	 |
+    -----------
+    |         |
+
+  Blob      Blob 
+
+
+git rm --cached a1.txt || to remove tracking a file
+ 
+git ls-files -s || to check what are the remaing tracked files
+	
+cat .git/head
+
+
+---------------------------------------------------------
+Now repository ==> working dir
+
+1) git init
+
+2) echo "first" | git hash-object --stdin -w // to create a git objects
+
+3) create a file outside the dir
+	
+*100644 -> blob id
+
+4) 100644 blob 9c59e24b8393179a5d712de4f990178df5734d99 a.txt
+	// in f1.txt
+
+5) repeat the process for the other blob
+
+--------------
+| 13.09.2023 |
+--------------
+
+6)  cat f1.txt | git mktree // to make tree
+
+7) git read-tree 59882 // read tree
+
+8)  git checkout-index -a // file are transfered from staging area to working dir
+
+
+       git checkout     git tree [tree_id]
+
+           <--                  <--
+
+working dir	staging area 	     repo
+    |		     |    	      |
+    v		     v                v
+    ls        git ls-files -s       find .git/objects -type f
+
+9) $ git cat-file -p 93825 // to view the content of commit
+
+--------------
+| 14.09.2023 |
+--------------
+
+10) git rm --cached a.txt // to delete the file {blob}
+
+11) do git commit	
+
+12) check git log
+
+13) { master will shift to the new commit head }
+
+14)  delete all and do commit
+
+//now restoration of files
+
+15) git checkout [code]
+
+--------------
+| 26.09.2023 |
+--------------
+
+#task1
+
+Create any 2 blob objects move these objects to the staging area and then to the working dir
+
+#task2
+create 2 files in a folder [path: Documents/gitProject/]
+file1.txt	file2.txt
+move from working  dir -> satging area
+staging area -> repo
+
+
+UNIT -4
+
+--------------
+| 28.09.2023 |
+--------------
+
+Snapshot 1:
+
+Head -> Master
+     |
+     v
+commit [hash code]
+     |
+     v
+tree [hash code]
+     |
+     v
+ ---------
+ |       |
+ v       V
+Blob   Blob
+
+
+[make 2 files and commit]
+
+
+Snapshot 2:
+
+  Master                  head ->b1
+     |                        |
+     v                        v
+commit [hash code](parent)->commit 
+     |                        |
+     v                        v
+tree [hash code]            tree
+     |                        |
+     v                        v
+ ---------             --------------
+ |       |             |            |
+ v       V             v            v
+Blob   Blob          Blob         Blob
+
+1) make branch "development"
+2) git checkout / git switch
+3) git branch // to check the curent branch
+4) add a file
+5) do commit
+6) check log
+
+Snapshot 3:
+
+  Master                  head ->b2
+     |                        |
+     v                        v
+commit [hash code](parent)->commit 
+     |                        |
+     v                        v
+tree [hash code]            tree
+     |                        |
+     v                        v
+ ---------             --------------
+ |       |             |            |
+ v       V             v            v
+Blob   Blob          Blob         Blob
+
+
+1) git checkout master
+2) git checkout -b b2
+3) git  branch
+
+--------------
+| 05.10.2023 |
+--------------
+
+TO delete branch on gitHub
+
+git push orgin --delete BRANCH_NAME
+
+
+Git comparision:
+----------------
+
+
+                git diff                       git diff --staged
+working dir ------------------->Staging area ---------------------> local repo
+   |                                                                   |
+   |<------------------------------------------------------------------|
+                                git diff head                                
+
+SCM / VC
+* Source code management
+
+
+
+
