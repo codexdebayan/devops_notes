@@ -233,5 +233,12 @@ SCM / VC
 * Source code management
 
 
+git fetch / git merge
+
+git pull
+
+git rebase
+
+
 
 
