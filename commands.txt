@@ -240,5 +240,8 @@ git pull
 git rebase
 
 
+git rebase -i  -> never use it with remote repo , only works with on and before push or pull 
+
+
 
 
