@@ -243,5 +243,57 @@ git rebase
 git rebase -i  -> never use it with remote repo , only works with on and before push or pull 
 
 
+--------------------------------------------------------------------------------------------------------------
+
+--------------
+| 18.10.2023 |
+--------------
+
+
+git stash
+
+git stash list   -> [ lowest no give the idea of latest stash and the vice versa ]
+
+git stash show -p -u 
+
+git stash show stash@{1}
+
+-p --> with a patch
+
+-u --> untracked files 
+or
+--include-untracked
+or
+--only-untracked	
+
+
+
+## How to apply the stash
+
+git stash apply         // works with latest stash
+
+git stash apply stash@{3}
+
+
+## Apply and remove the stash stack
+
+git stash pop
+
+
+## How to delete a stash
+
+git stash clear   // deletes all statshes
+
+git stash drop stash@{2}
+
+git stash branch <branch_name>
+
+or
+
+git stash branch <branch_name> stash@{revision}
+
+eg: git stash branch development stash@{3}
+
+
 
 
