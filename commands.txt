@@ -371,3 +371,40 @@ HP@Debayan MINGW64 ~/desktop/new (master)
 $
 
 ############################################
+
+--------------
+| 26.10.2023 |
+--------------
+
+3 way merging
+                     __________C-----C-----C----B1
+----C----C-----C----[__________C-----C-----C----B2
+            master
+
+
+--------------
+| 02.11.2023 |
+--------------
+
+git tag -a v1.4 -m"version 1.4 is released" // annotated tag
+
+git tag v1.4 -lw //light weight : by default
+
+git tag // to check how many tags are created
+
+git tag v1.2 12134532 // tagging of older commits
+
+git tag -a -f v.13 12134532 // force change  or  retagging 
+
+git push tag origin v1.4 
+
+git push --tag
+
+git checkout v1.4
+
+git tag -d v1 // to delete a tag
+
+git show v1.4 // to check the details of the tag
+
+ 
+

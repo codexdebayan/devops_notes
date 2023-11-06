@@ -1,0 +1,32 @@
+on main
+
+abda4f3 (HEAD -> main) initial commit
+7410f23 (origin/main, origin/HEAD, b2, b1) Initial commit
+
+on login 1
+
+eae4bb1 (HEAD -> b1) commit on login brnach
+7410f23 (origin/main, origin/HEAD, b2) Initial commit
+
+on login2
+
+65c9e8a (HEAD -> login1) commit on login1 branch
+7410f23 (origin/main, origin/HEAD) Initial commit
+
+after merging login 1
+
+8de42ea (HEAD -> main) Merge branch 'login1'
+65c9e8a (login1) commit on login1 branch
+abda4f3 initial commit
+7410f23 (origin/main, origin/HEAD) Initial commit
+
+after merging login2
+
+$ git log --oneline
+246ecad (HEAD -> main) Merge branch 'login2'
+8de42ea Merge branch 'login1'
+65c9e8a (login1) commit on login1 branch
+eae4bb1 (login2) commit on login brnach
+abda4f3 initial commit
+7410f23 (origin/main, origin/HEAD) Initial commit
+
