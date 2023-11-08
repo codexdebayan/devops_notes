@@ -406,5 +406,15 @@ git tag -d v1 // to delete a tag
 
 git show v1.4 // to check the details of the tag
 
- 
+
+--------------
+| 08.11.2023 |
+--------------
+mvn archetype:generate -DgroupId=org.devop1 -DartifactId=mavenprt1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.0 -DinteractiveMode=false
+
+mvn test
+
+mvn package
+
+
 
