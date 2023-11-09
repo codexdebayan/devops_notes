@@ -416,5 +416,18 @@ mvn test
 
 mvn package
 
+--------------
+| 09.11.2023 |
+--------------
+
+java -cp target/mavenprt1-1.0-SNAPSHOT.jar org.devop1.App
+
+------------------------
+
+Now if you want to change the java file make changes in the java file and then
+
+mvn clean
+
+mvn package
 
 
