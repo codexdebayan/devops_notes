@@ -1,0 +1,24 @@
+1) How does Docker differ from traditional virtualization?
+
+
+1) Docker differs from traditional virtualization in its approach to containerization. While traditional virtualization involves running multiple virtual machines (VMs) on a hypervisor, each with its own operating system (OS), Docker uses containerization to encapsulate applications and their dependencies into isolated containers. Containers share the host OS kernel, making them lightweight and more efficient compared to VMs.
+
+2) How does Docker facilitate portability of applications?
+
+
+2) Docker facilitates portability by encapsulating applications and their dependencies into containers. These containers are self-sufficient and can run consistently across different environments, such as development, testing, and production. This ensures that an application runs the same way regardless of where it is deployed, promoting a consistent and reliable experience.
+
+3) Can Docker containers run on windows and linux interchangibility?
+
+
+3) Yes, Docker containers can run on both Windows and Linux interchangeably. Docker provides a platform-independent container runtime environment. This means that a Docker container built on one platform can be executed on another without modification, as long as both platforms support Docker.
+
+4) What is the significance of DOcker volumes in data management?
+
+
+4) Docker volumes are significant in data management because they provide a way to persist and manage data outside of the container lifecycle. Unlike the container file system, which is ephemeral, volumes are separate entities that can be shared among multiple containers. This allows for data persistence, easy backup, and sharing of data between containers, enhancing data management capabilities.
+
+5) How does Docker contribute to a DevOps workflow?
+
+
+5) Docker contributes to a DevOps workflow by providing a standardized and reproducible environment for development, testing, and deployment. Developers can package their applications and dependencies into containers, ensuring consistency across different stages of the development lifecycle. Containers can be versioned and shared, making it easier to collaborate between development and operations teams. Docker also integrates well with automation tools, allowing for continuous integration and deployment (CI/CD) pipelines in a DevOps workflow.
