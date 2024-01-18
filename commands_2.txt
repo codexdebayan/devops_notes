@@ -1,0 +1,23 @@
+Before installing docker check wsl 
+
+wsl --version
+
+wsl --status
+
+After Installation 
+
+1) docker --info
+
+2) docker --version
+
+3) docker images
+
+4) docker search image<image_name>
+
+5) docker history
+
+Docker uses a content-addressable image store, and the image ID is a SHA256 digest covering the image's configuration and layers. In the example above, debian:bookworm and debian:latest have the same image ID because they are the same image tagged with different names. 
+
+docker inspect --format='{{json .Id}}' efe2d67c403b
+
+total 64 characters * 4bits = 256 bits
